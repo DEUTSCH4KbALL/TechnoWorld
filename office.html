@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="shortcut icon" href="./img/logo/Без имени.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <span>☀️</span>
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch"></label>
+            <span>🌙</span>
+        </div>
+        <div class="language-toggle">
+            <div class="blue"><span>UA</span></div>
+            <input type="checkbox" id="language-switch" />
+            <label for="language-switch"></label>
+            <div class="blue"><span>EN</span></div>
+        </div>
+        <h1>Інтернет-магазин</h1>
+        <h2>ТехноСвіт</h2>
+        <nav>
+            <ul>
+                <div class="Logo">
+                    <a href="index.html"><img src="./img/logo/logo_TechnoWorld.png" alt="" id="circle"></a>
+                </div>
+                <li><a href="index.html" class="active" data-direction="left">Продукти</a></li>
+                <!-- Додано data-direction -->
+                <li><a href="contact-page.html" data-direction="right">Контакти</a></li> <!-- Додано data-direction -->
+                <li><a href="#" id="cart-link" data-direction="right">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-2">
+        <div class="wrapper" id="image-wrapper">
+            <div class="product">
+                <img src="./img/system_photos/Office-programs/microsoft_365_bus_std_retail_all_lng_1yr_elektronnyy_klyuch_klq-00217~1563~1564.webp" alt="Програмні забезпечення"
+                    id="software-programs" class="container-soft2">
+                <h3>Офіс Бізнес преміум</h3>
+                <p>Опис офіса: <br>Microsoft 365 Bus Std Retail All Lng 1YR Електронний ключ (KLQ-00217)<br>Ціна: 7 999</p>
+                <button onclick="addToCart('Офіс Бізнес преміум')">Додати до кошика</button>
+
+                <img src="./img/system_photos/Office-programs/microsoft_office_2019_home_and_business_all_language_elektronnyy_klyuch_t5d-03189~629~630.webp"
+                    alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+                <h3>Офіс Дім і Робота 2019</h3>
+                <p>Опис офіса: <br>Microsoft Office 2019 Home and Business All Language Електронний ключ (T5D-03189)<br>Ціна: 6 999</p>
+                <button onclick="addToCart('Офіс для Дому та Роботи 2019')">Додати до кошика</button>
+                <img src="./img/system_photos/Office-programs/microsoft_office_2019_home_and_student_all_language_elektronnyy_klyuch_79g-05012~1564~1564.webp"
+                    alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+                <h3>Офіс Дім і Навчання 2019</h3>
+                <p>Опис офіса: <br>Microsoft Office 2019 Home and Student All Language Електронний ключ (79G-05012)<br>Ціна: 3 299</p>
+                <button onclick="addToCart('Офіс для Дому та Навчання 2019')">Додати до кошика</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout">Оформити замовлення</button>
+        </div>
+    </div>
+    </div>
+    <sectionsites>
+        <a href="https://t.me/ukrainian_dev">
+            <img src="./img/Our-channels/telegram.svg" alt="" id="telegram">
+        </a>
+        <a href="https://www.instagram.com/ukr.developer?utm_source=qr&igsh=cmJtZGt4OHE0M2Nk">
+            <img src="./img/Our-channels/instagramm.svg" alt="" id="instagramm">
+        </a>
+        <a href="https://www.youtube.com/@GOSS_BALL/featured">
+            <img src="./img/Our-channels/youtube.svg" alt="" id="youtube">
+        </a>
+    </sectionsites>
+    <footer>
+        <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+    </footer>
+</body>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="shortcut icon" href="./img/logo/Без имени.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <span>☀️</span>
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch"></label>
+            <span>🌙</span>
+        </div>
+        <div class="language-toggle">
+            <div class="blue"><span>UA</span></div>
+            <input type="checkbox" id="language-switch" />
+            <label for="language-switch"></label>
+            <div class="blue"><span>EN</span></div>
+        </div>
+        <h1>Інтернет-магазин</h1>
+        <h2>ТехноСвіт</h2>
+        <nav>
+            <ul>
+                <div class="Logo">
+                    <a href="index.html"><img src="./img/logo/logo_TechnoWorld.png" alt="" id="circle"></a>
+                </div>
+                <li><a href="index.html" class="active" data-direction="left">Продукти</a></li>
+                <!-- Додано data-direction -->
+                <li><a href="contact-page.html" data-direction="right">Контакти</a></li> <!-- Додано data-direction -->
+                <li><a href="#" id="cart-link" data-direction="right">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="left">
+            <a href="index.html">
+                <img src="./img/logo/sl_arrow_left.png" alt="" id="left-arrow" class="blinking-arrow">
+            </a>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/chehol_dlya_macbook_pro_15_retina_jcpal_matte_gray_jcp2080~972~708.webp"
+                        alt="Чохол" id="nout" class="slider-image">
+                    <h3>Чохол для macBook</h3>
+                    <p>Опис чохла: <br>Чохол для MacBook Pro 15" Retina Jcpal Matte Gray (JCP2080)<br>Ціна: 409</p>
+                    <button onclick="addToCart('Чохол для macBook')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/noutbuk_apple_macbook_air_13_6_m2_8_512gb_2022_mlxx3ua_a~720~436.webp"
+                        alt="Ноутбук" id="nout" class="slider-image">
+                    <h3>Ноутбук Apple MacBook Air</h3>
+                    <p>Опис MacBook: <br>Ноутбук Apple MacBook Air 13.6" M2 8/512GB 2022 (MLXX3UA/A)) <br>Ціна: 69 499</p>
+                    <button onclick="addToCart('MacBook')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/monitor_24_asus_vg249qm1a~699~651.webp" alt="Монітор"
+                        id="monitor" class="slider-image">
+                    <h3>Монітор для ігор</h3>
+                    <p>Опис монітора: <br>Монітор 24" Asus VG249QM1A<br>Ціна: 11 799</p>
+                    <button onclick="addToCart('Монітор')">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/mysh_asus_tuf_gaming_m4_usb_wireless_90mp02f0-bmua00~2101~1631.webp" alt="Миша" id="mush"
+                        class="slider-image">
+                    <h3>Ігрова миша</h3>
+                    <p>Опис миші: <br>Миша Asus TUF Gaming M4 USB Wireless (90MP02F0-BMUA00)<br>Ціна: 3 899</p>
+                    <button onclick="addToCart('Миша')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/kompyuternyy_stol_dxracer_gd_003_n~2256~1992.webp"
+                        alt="Ігровий стіл" id="proc" class="slider-image">
+                    <h3>Стіл для комп'ютерних ігор</h3>
+                    <p>Опис стола: <br>Комп'ютерний стіл DXRacer GD/003/N<br>Ціна: 8 999</p>
+                    <button onclick="addToCart('Стіл')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/podstavka_dlya_noutbuka_gamepro_cp940~2498~1247.webp" alt="Підставка" id="podstavka"
+                        class="slider-image">
+                    <h3>Підставка для ноутбука</h3>
+                    <p>Опис підставки: <br>Підставка для ноутбука GamePro CP940<br>Ціна: 2 399</p>
+                    <button onclick="addToCart('Підставку для ноутбука')">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <a href="index.html">
+                <img src="./img/logo/sl_arrow_right.png" alt="" id="right-arrow" class="blinking-arrow">
+            </a>
+        </div>
+    </div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout">Оформити замовлення</button>
+        </div>
+    </div>
+    <sectionsites>
+        <a href="https://t.me/ukrainian_dev">
+            <img src="./img/Our-channels/telegram.svg" alt="" id="telegram">
+        </a>
+        <a href="https://www.instagram.com/ukr.developer?utm_source=qr&igsh=cmJtZGt4OHE0M2Nk">
+            <img src="./img/Our-channels/instagramm.svg" alt="" id="instagramm">
+        </a>
+        <a href="https://www.youtube.com/@GOSS_BALL/featured">
+            <img src="./img/Our-channels/youtube.svg" alt="" id="youtube">
+        </a>
+    </sectionsites>
+    <footer>
+        <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+    </footer>
+</body>
+
+</html>

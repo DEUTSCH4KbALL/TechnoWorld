@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="shortcut icon" href="./img/logo/Без имени.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/scriptProducts1.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- 1. Кошик при зміні теми. ✅
+        2.Додати ще товарів для слайдера. ✅
+        3.Додати HTML,JS  для Програмні забезпечення ✅
+        4. Нова не вирішена проблема ❌
+        5. Нова не вирішена проблема в ИТ програми❌--> 
+        <div class="toggle">
+            <span>☀️</span>
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch"></label>
+            <span>🌙</span>
+        </div>
+        <div class="language-toggle">
+            <div class="blue"><span>UA</span></div>
+            <input type="checkbox" id="language-switch" />
+            <label for="language-switch"></label>
+            <div class="blue"><span>EN</span></div>
+        </div>
+        <h1>Інтернет-магазин</h1>
+        <h2>ТехноСвіт</h2>
+        <nav>
+            <ul>
+                <div class="Logo">
+                    <a href="#"><img src="./img/logo/logo_TechnoWorld.png" alt="" id="circle"></a>
+                </div>
+                <li><a href="index.html" class="active" data-direction="left">Продукти</a></li>
+                <!-- Додано data-direction -->
+                <li><a href="contact-page.html" data-direction="right">Контакти</a></li> <!-- Додано data-direction -->
+                <li><a href="#" id="cart-link" data-direction="right">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="slider">
+        <div class="left">
+            <a href="products2.html">
+                <img src="./img/logo/sl_arrow_left.png" alt="" id="left-arrow" class="blinking-arrow">
+            </a>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/noutbuk_asus_tuf_gaming_f15_fx507zc4_fx507zc4-hn009~2158~1615.webp"
+                        alt="Ноутбук" id="nout" class="slider-image">
+                    <h3>Ноутбук</h3>
+                    <p>Опис ноутбука: <br>ASUS TUF GAMING F15 <br>Ціна: 37 679</p>
+                    <button onclick="addToCart('Ноутбук')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/mysh_hator_pulsar_2_pro_wireless_black_htm-530~727~1382.webp"
+                        alt="Комп'ютерна миша" id="mush" class="slider-image">
+                    <h3>Комп'ютерна миша</h3>
+                    <p>Опис комп'ютерної миші: <br>Миш Hator Pulsar 2 Pro Wireless Black (HTM-530) <br>Ціна: 1 200</p>
+                    <button onclick="addToCart('Комп\'ютерну мишу')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/kovrik_havit_hv-mp860_black_red~665~282.webp" alt="Килимок для миші"
+                        id="covric-mush" class="slider-image">
+                    <h3>Килимок для миші</h3>
+                    <p>Опис килимка для миші: <br>Килимок Havit HV-MP860 Black/Red<br>Ціна: 395</p>
+                    <button onclick="addToCart('Килимок для миші')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/podstavka_dlya_noutbuka_gamepro_cp485~1332~848.webp" alt="Підставка"
+                        id="podstavka" class="slider-image">
+                    <h3>Підставка для ноутбука</h3>
+                    <p>Опис підставки: <br>GamePro CP485 <br>Ціна: 799</p>
+                    <button onclick="addToCart('Підставку під ноутбук')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/videokarta_msi_pci-e_geforce_rtx3060_lhr_12gb_ddr6_rtx_3060_ventus_3x_12g_oc~862~365.webp"
+                        alt="Відеокарта" id="videokarta" class="slider-image">
+                    <h3>Відеокарта</h3>
+                    <p>Опис відеокарти: <br>Відеокарта MSI PCI-E GeForce RTX3060 LHR 12GB DDR6 (RTX 3060 VENTUS 3X 12G
+                        OC)<br>Ціна: 14 399</p>
+                    <button onclick="addToCart('Відеокарту')">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/router_tp-link_archer_a64~762~813.webp" alt="Роутер" id="router"
+                        class="slider-image">
+                    <h3>Роутер</h3>
+                    <p>Опис роутера: <br>Роутер TP-Link Archer A64<br>Ціна: 2 399</p>
+                    <button onclick="addToCart('Роутер')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/protsessor_amd_ryzen_5_5600_s-am4_3_5ghz_32mb_tray_100-000000927~1000~1000.webp"
+                        alt="Процесор" id="proc" class="slider-image">
+                    <h3>Процесор</h3>
+                    <p>Опис процесора: <br>Процесор AMD Ryzen 5 5600 s-AM4 3.5GHz/32MB Tray (100-000000927)<br>Ціна: 5
+                        500</p>
+                    <button onclick="addToCart('Процесор')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/monitor_45_aoc_agon_pro_ag456uczd~6132~3724.webp" alt="Монітор" id="monitor"
+                        class="slider-image">
+                    <h3>Монітор</h3>
+                    <p>Опис монітора: <br>Монітор 45" AOC AGON Pro AG456UCZD<br>Ціна: 59 567</p>
+                    <button onclick="addToCart('Монітор')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/kabel_hdmi_-_dvi_dynamode_1_8_m_dm-cl-hdmi-dvi-1_8m~584~627.webp"
+                        alt="Кабель" id="HDMI" class="slider-image">
+                    <h3>Кабель HDMI</h3>
+                    <p>Опис HDMI: <br>Кабель HDMI -> DVI Dynamode 1.8 м (DM-CL-HDMI-DVI-1.8M)<br> Ціна: 169</p>
+                    <button onclick="addToCart('Кабель')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/naushniki_varr_headset_vh8030_rgb_black_vh8030~2399~2018.webp"
+                        alt="Навушники" id="naushniki" class="slider-image">
+                    <h3>Навушники</h3>
+                    <p>Опис навушників: <br>Наушники Varr Headset VH8030 RGB Black (VH8030)<br><span
+                            class="havent">___</span></p>
+                </div>
+                <div class="product">
+                    <img src="./img/content/3469a-17205440614957-1920.avif" alt="Процесор" id="proc"
+                        class="slider-image">
+                    <h3>Intel Core i9</h3>
+                    <p>Опис Процесора: <br>Intel Core Ultra 9 185H - це топовий чіп сімейства Meteor Lake, <br>
+                        що дебютував у грудні 2023 року. <br>
+                        Цей процесор 1-го покоління Core Ultra прийшов на зміну <br>
+                        чипам Core 13-го покоління; у його розпорядженні 16 ядер (6 + 8 + 2) та 22 потоки.<br> Ціна: 18
+                        942 + Подарунок 2 процессори</p>
+                    <button onclick="addToCart('Процесори')">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/1847489_zoom_result.webp" alt="Планшет" id="planshet" class="slider-image">
+                    <h3>Планшет</h3>
+                    <p>Опис планшета: <br>Lenovo Tab M11 8/128 LTE (ZADB0330UA) Seafoam Green + Case&Pen <br>Ціна: 10
+                        999</p>
+                    <button onclick="addToCart('Планшет')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/naushniki_canyon_cnd-gtws2b_gaming_black~999~887.webp" alt="Навушниуи"
+                        id="naushniki" class="slider-image">
+                    <h3>Навушники</h3>
+                    <p>Опис навушників: <br>Canyon CND-GTWS2B Gaming Black<br>Ціна: 899</p>
+                    <button onclick="addToCart('Навушники')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/romoss_rs500_2_result.jpg" alt="Зарядна станція" id="zaryad-station"
+                        class="slider-image">
+                    <h3>Зарядна станція</h3>
+                    <p>Опис зарядної станції: <br>Romoss RS500 (RS500-2B2-G153H) (1000 Вт)<br>Ціна: 19 999</p>
+                    <button onclick="addToCart('Зарядну станцію')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/kompyuter_artline_gaming_y60_white_y60whitev24~1672~1656.webp"
+                        alt="Комп'ютер" id="computer" class="slider-image">
+                    <h3>Ігровий Комп'ютер</h3>
+                    <p>Опис комп'ютера: <br>Комп'ютер Artline Gaming Y60 White (Y60WHITEv24) <br>Ціна: 202 849</p>
+                    <button onclick="addToCart('Комп\'ютер')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/mobilnyy_telefon_apple_iphone_15_plus_256gb_blue_mu1f3_ua~1494~2000.webp"
+                        alt="Телефон" id="iPhone" class="slider-image">
+                    <h3>iPhone</h3>
+                    <p>Опис iPhone: <br>Мобільний телефон Apple iPhone 15 Plus 256GB Blue (MU1F3) UA<br>Ціна: 45 999</p>
+                    <button onclick="addToCart('Телефон')">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/kvadrokopter_dji_mavic_3t_cp_en_00000415_01~2046~900.webp"
+                        alt="Квадрокоптер" id="kvd" class="slider-image">
+                    <h3>Квадрокоптер</h3>
+                    <p>Опис квадрокоптера:<br>Квадрокоптер DJI Mavic 3T (CP.EN.00000415.01)<br>Ціна: 103 999</p>
+                    <button onclick="addToCart('Квадрокоптер')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/noutbuk_acer_travelmate_spin_p4_tmp414rn-52-50kg_nx_vw8eu_006~1406~864.webp"
+                        alt="Ноутбук" id="nout-2" class="slider-image">
+                    <h3>Ноутбук</h3>
+                    <p>Опис ноутбука: <br>Ноутбук Acer TravelMate Spin P4 TMP414RN-52-50KG (NX.VW8EU.006)<br>Ціна: 24
+                        452</p>
+                    <button onclick="addToCart('Ноутбук')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/naushniki_apple_airpods_pro_2_white_mqd83~2500~2130.webp"
+                        alt="Навушники Apple" id="apple-naush" class="slider-image">
+                    <h3>Навушники</h3>
+                    <p>Опис навушників: <br>Навушники Apple AirPods Pro 2 White (MQD83)<br>Ціна: 10 9999</p>
+                    <button onclick="addToCart('Навушники')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/modul_pamyati_so-dimm_micron_ddr3_8gb_1600mhz_mt16ktf1g64hz-1g6p1~969~437.webp"
+                        alt="Модуль" id="modul" class="slider-image">
+                    <h3>Модуль пам'яті </h3>
+                    <p>Опис модуля пам'яті: <br>Модуль пам'яті SO-DIMM Micron DDR3 8GB 1600MHz (MT16KTF1G64HZ-1G6P1)<br>
+                        Ціна: 800</p>
+                    <button onclick="addToCart(' Модуль пам\'яті')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/televizor_xiaomi_tv_a_pro_65~1500~1408.webp" alt="Телевізор" id="tel"
+                        class="slider-image">
+                    <h3>Телевізор (XXL)</h3>
+                    <p>Опис телевізора: <br>Телевізор Xiaomi TV A Pro 65"<br> Ціна: 27 999</p>
+                    <button onclick="addToCart('Телевізор')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/kreslo_geymerskoe_gt_racer_x-2534-f_fabric_black~509~903.webp" alt="Крісло"
+                        id="krislo" class="slider-image">
+                    <h3>Крісло для геймерів</h3>
+                    <p>Опис крісла: <br>Крісло геймерське GT Racer X-2534-F Fabric Black<br> Ціна: 9 199</p>
+                    <button onclick="addToCart('Крісло')">Додати до кошика</button>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="image-wrapper">
+                <div class="product">
+                    <img src="./img/content/materinskaya_plata_gigabyte_b550_gaming_x_v2_s-am4_b550~792~981.webp"
+                        alt="Материнська плата" id="mat" class="slider-image">
+                    <h3>Материнська плата</h3>
+                    <p>Опис Материнської плати: <br>Материнська плата Gigabyte B550 Gaming X V2 s-AM4 B550 <br>Ціна: 5
+                        599</p>
+                    <button onclick="addToCart('Материнську плату')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/sistema_vodyanogo_ohlazhdeniya_deepcool_ld240_r-ld240_bkmsn-g-1~2500~1135.webp"
+                        alt="Система охолодження" id="stema" class="slider-image">
+                    <h3>Система охолодження</h3>
+                    <p>Опис системи охолодження: <br>Система водяного охолодження DeepCool LD240 (R-LD240–BKMSN-G-1)
+                        <br>Ціна: 5 109
+                    </p>
+                    <button onclick="addToCart('Систему охолодження')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/eilik-2-800x800.jpg" alt="Робот Ейлік" id="robot" class="slider-image">
+                    <h3>Робот Ейлік</h3>
+                    <p>Опис робота: <br>Робот Eilik F1 White (WL-F1p)<br>Ціна: 3 586</p>
+                    <button onclick="addToCart('Робота')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/content/korpus_1stplayer_r5-3r1_color_led_black_b_bp~649~836.webp" alt="Корпус"
+                        id="korpus" class="slider-image">
+                    <h3>Корпус для ігрового ПК</h3>
+                    <p>Опис корпуса: <br>Корпус 1stPlayer R5-3R1 Color LED Black б/БЖ <br>Ціна: 3 399</p>
+                    <button onclick="addToCart('Корпус для ПК')">Додати до кошика</button>
+                </div>
+                <div class="product">
+                    <img src="./img/system_photos/Програмне забезпечення (Папка з розділами).webp"
+                        alt="Програмні забезпечення" id="software-programs" class="slider-image">
+                    <h3>Програмні <br>забезпечення</h3>
+                    <button id="software-button">Переглянути</button>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <a href="products2.html">
+                <img src="./img/logo/sl_arrow_right.png" alt="" id="right-arrow" class="blinking-arrow">
+            </a>
+        </div>
+    </div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout">Оформити замовлення</button>
+        </div>
+    </div>
+    <sectionsites>
+        <a href="https://t.me/ukrainian_dev">
+            <img src="./img/Our-channels/telegram.svg" alt="" id="telegram">
+        </a>
+        <a href="https://www.instagram.com/ukr.developer?utm_source=qr&igsh=cmJtZGt4OHE0M2Nk">
+            <img src="./img/Our-channels/instagramm.svg" alt="" id="instagramm">
+        </a>
+        <a href="https://www.youtube.com/@BrimTECH1">
+            <img src="./img/Our-channels/youtube.svg" alt="" id="youtube">
+        </a>
+    </sectionsites>
+    <footer>
+        <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+    </footer>
+</body>
+
+</html>

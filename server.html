@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <link rel="shortcut icon" href="./img/logo/Без имени.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ТехноСвіт</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="toggle">
+            <span>☀️</span>
+            <input type="checkbox" id="toggle-switch" />
+            <label for="toggle-switch"></label>
+            <span>🌙</span>
+        </div>
+        <div class="language-toggle">
+            <div class="blue"><span>UA</span></div>
+            <input type="checkbox" id="language-switch" />
+            <label for="language-switch"></label>
+            <div class="blue"><span>EN</span></div>
+        </div>
+        <h1>Інтернет-магазин</h1>
+        <h2>ТехноСвіт</h2>
+        <nav>
+            <ul>
+                <div class="Logo">
+                    <a href="index.html"><img src="./img/logo/logo_TechnoWorld.png" alt="" id="circle"></a>
+                </div>
+                <li><a href="index.html" class="active" data-direction="left">Продукти</a></li>
+                <!-- Додано data-direction -->
+                <li><a href="contact-page.html" data-direction="right">Контакти</a></li> <!-- Додано data-direction -->
+                <li><a href="#" id="cart-link" data-direction="right">Кошик (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container-2">
+        <div class="wrapper" id="image-wrapper">
+            <div class="product">
+                <img src="./img/system_photos/Server-PS/microsoft_exchange_server_enterprise_2019_device_cal_educational_perpetual_dg7gmgf0f4md_0005edu~600~600.webp" alt="Програмні забезпечення"
+                    id="software-programs" class="container-soft2">
+                <h3>Сервер 2019 Exchange</h3>
+                <p>Опис сервера: <br>Microsoft Exchange Server Standard 2019 User CAL Educational Perpetua (DG7GMGF0F4MB_0004EDU)<br>Ціна: 321</p>
+                <button onclick="addToCart('Microsoft Exchange Server Standard 2019 User CAL Educational Perpetua')">Додати до кошика</button>
+
+                <img src="./img/system_photos/Server-PS/microsoft_windows_server_2022_1_device_cal_commercial_perpetual_dg7gmgf0d5vx_0006~900~900.webp"
+                    alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+                <h3>Сервер</h3>
+                <p>Опис сервера: <br>Microsoft Windows Server 2022 1 Device CAL Commercial Perpetual (DG7GMGF0D5VX_0006)<br>Ціна: 2 746</p>
+                <button onclick="addToCart('Microsoft Windows Server 2022')">Додати до кошика</button>
+
+                <img src="./img/system_photos/Server-PS/microsoft_windows_server_2022_standard_8_core_license_pack_1y_subscription_dg7gmgf0d5rk_0002_p1y_a~400~400.webp"
+                    alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+                <h3>Сервер</h3>
+                <p>Опис сервера: <br>Microsoft Windows Server 2022 Standard 8 Core License Pack 1Y Subscription (DG7GMGF0D5RK_0002_P1Y_A)<br>Ціна: 13 398</p>
+                <button onclick="addToCart('Microsoft Windows Server 2022 Standard')">Додати до кошика</button>
+
+                <img src="./img/system_photos/Server-PS/microsoft_windows_server_standard_2022_64bit_russian_dvd_16_core_p73-08337~816~1200.webp"
+                    alt="Програмні забезпечення" id="software-programs" class="container-soft2">
+                <h3>Сервер</h3>
+                <p>Опис сервера: <br>Microsoft Windows Server Standard 2022 64Bit Russian DVD 16 Core (P73-08337)<br>Ціна: 48 999</p>
+                <button onclick="addToCart('Microsoft Windows Server Standard 2022 64Bit')">Додати до кошика</button>
+            </div>
+        </div>
+    </div>
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">×</span>
+            <h2>Ваш кошик</h2>
+            <ul id="cart-items"></ul>
+            <button id="checkout">Оформити замовлення</button>
+        </div>
+    </div>
+    </div>
+    <sectionsites>
+        <a href="https://t.me/ukrainian_dev">
+            <img src="./img/Our-channels/telegram.svg" alt="" id="telegram">
+        </a>
+        <a href="https://www.instagram.com/ukr.developer?utm_source=qr&igsh=cmJtZGt4OHE0M2Nk">
+            <img src="./img/Our-channels/instagramm.svg" alt="" id="instagramm">
+        </a>
+        <a href="https://www.youtube.com/@GOSS_BALL/featured">
+            <img src="./img/Our-channels/youtube.svg" alt="" id="youtube">
+        </a>
+    </sectionsites>
+    <footer>
+        <p>© 2024 ТехноСвіт. Всі права захищені.</p>
+    </footer>
+</body>
